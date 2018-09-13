@@ -28,7 +28,7 @@ client.user.setGame(`WeAreOne||'$' `,"https://www.twitch.tv/S-F")
   console.log('')
 });
 
-const credits = JSON.parse(fs.readFileSync("./creditsCode.json", "utf8"));
+const credits = JSON.parse(fs.readFileSync(".creditsCode.json", "utf8"));
 const coolDown = new Set();
 
 client.on('message',async message => {
@@ -41,7 +41,7 @@ if(!credits[message.author.id]) credits[message.author.id] = {
 let userData = credits[message.author.id];
 let m = userData.credits;
 
-fs.writeFile("./creditsCode.json", JSON.stringify(credits), (err) => {
+fs.writeFile(".creditsCode.json", JSON.stringify(credits), (err) => {
     if (err) console.error(err);
   });
   credits[message.author.id] = {
@@ -65,7 +65,7 @@ client.on('message', async message => {
     credits: m
     };
 
-    fs.writeFile("./creditsCode.json", JSON.stringify(userData.credits + amount), (err) => {
+    fs.writeFile(".creditsCode.json", JSON.stringify(userData.credits + amount), (err) => {
     if (err) console.error(err);
     });
     
