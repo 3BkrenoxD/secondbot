@@ -172,7 +172,7 @@ client.on('message', message => {
         let embed = new Discord.RichEmbed()
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
         .setTitle(`:small_orange_diamond: Click Here `)
-        .setURL(`https://discordapp.com/oauth2/authorize?client_id=337702789285150720&permissions=8&scope=bot`)        
+        .setURL(`https://discordapp.com/login?redirect_to=%2Foauth2%2Fauthorize%3Fclient_id%3D337702789285150720%2520%26scope%3Dbot%26permissions%3D269671551`)        
      message.channel.sendEmbed(embed);
        }
    }); 
@@ -413,7 +413,7 @@ soon
 ==================================================================
 Server support: https://discord.gg/6Gg666U
 ==================================================================
-bot invite link: https://discordapp.com/api/oauth2/authorize?client_id=20337702789285150720%20&scope=bot&permissions=269671551
+bot invite link: https://discordapp.com/login?redirect_to=%2Foauth2%2Fauthorize%3Fclient_id%3D337702789285150720%2520%26scope%3Dbot%26permissions%3D269671551
 ==================================================================
 `);
 
