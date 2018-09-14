@@ -41,7 +41,6 @@ anti_spam(bot, {
   maxDuplicatesBan: 10  //alpha codes
 });
 
-bot.login(process.env.BOT_SPAM);
 
 const bot1 = new Discord.Client();
 
