@@ -20,7 +20,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
 	if(message.author.bot) return;
-var perfix = "prefix";
+var perfix = "$";
       if (message.content.startsWith(prefix + 'clear')) {
         if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(`**You Don't Have**  *MANAGE_MESSAGES*  **Permission **`).catch(console.error);
     message.delete()
@@ -671,7 +671,30 @@ client.on('message', message => {
         })
     }
 })
-	
 
+
+client.on('message', message=> {
+    if (message.author.bot) return;
+    if (message.isMentioned(client.user))
+    {
+    message.reply(" هلا !!");
+    }
+});
 	
+client.on('message', message=> {
+    if (message.author.bot) return;
+    if (message.isMentioned(client.user))
+    {
+    message.reply(" ياليل شتبي يا ورع !!");
+    }
+});
+	client.on('message', message=> {
+    if (message.author.bot) return;
+    if (message.isMentioned(client.user))
+    {
+    message.reply(" لا تزعجني !!");
+    }
+});
+
+
 	client.login(process.env.BOT_TOKEN);
