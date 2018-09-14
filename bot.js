@@ -389,7 +389,7 @@ __~~WeAreOne~~__ By: ! ＭＯ３ＡＺ ⊗#1599
 ❖ $unban <id> ➾ unban from server
 ❖ $role <user> <rolename>
 ❖ $giveaway ➾ use it to make giveaway
-❖ $setup ➾ to make server stats (time'date)
+❖ $settime ➾ to make server stats (time)
 ╔[❖════════════❖]╗
             General  Commands
 ╚[❖════════════❖]╝
