@@ -388,6 +388,7 @@ __~~WeAreOne~~__ By: ! ＭＯ３ＡＺ ⊗#1599
 ❖ $ban <mention> <reason> ➾ ban member from server
 ❖ $unban <id> ➾ unban from server
 ❖ $role <user> <rolename>
+❖ $giveaway ➾ use it to make giveaway
 ╔[❖════════════❖]╗
             General  Commands
 ╚[❖════════════❖]╝
@@ -401,6 +402,7 @@ __~~WeAreOne~~__ By: ! ＭＯ３ＡＺ ⊗#1599
 ❖ $support ➾ server support link
 ❖ $msg ➾  for send msg for someone by bot
 ❖ $msg ➾  for send msg for someone by bot
+❖ $topinv ➾ to know who invite people
 ╔══════════════❖]╗
                   Games
 ╚[❖════════════❖]╝
