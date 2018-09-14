@@ -374,7 +374,10 @@ __~~WeAreOne~~__ By: ! ＭＯ３ＡＺ ⊗#1599
 ╔[❖════════════❖]╗
              Prefix = ' $ '
 ╚[❖════════════❖]╝
-╔[❖════════════❖]╗
+╔══════════════❖]╗
+         write help for music commands
+╚[❖════════════❖]╝
+╔══════════════❖]╗
              Admin Commands
 ╚[❖════════════❖]╝
 ❖ $bc <message> ➾ message all members in server
@@ -384,9 +387,11 @@ __~~WeAreOne~~__ By: ! ＭＯ３ＡＺ ⊗#1599
 ❖ $clear <number> ➾ clear chat
 ❖ $ban <mention> <reason> ➾ ban member from server
 ❖ $unban <id> ➾ unban from server
+❖ $role <user> <rolename>
 ╔[❖════════════❖]╗
             General  Commands
 ╚[❖════════════❖]╝
+❖ $room <name> ➾ make ur self voice room for 2min
 ❖ $id ➾ your id
 ❖ $report ➾ to report someone in server
 ❖ $info ➾ user & bot informations 
@@ -396,6 +401,11 @@ __~~WeAreOne~~__ By: ! ＭＯ３ＡＺ ⊗#1599
 ❖ $support ➾ server support link
 ❖ $msg ➾  for send msg for someone by bot
 ❖ $msg ➾  for send msg for someone by bot
+╔══════════════❖]╗
+                  Games
+╚[❖════════════❖]╝
+❖ $امثال
+soon
 ==================================================================
 Server support: https://discord.gg/6Gg666U
 ==================================================================
@@ -480,9 +490,185 @@ client.on("message", message => {
     });
 	
 	
+	client.on('message', message => {
+    let args = message.content.split(' ').slice(1);
+    if(message.content.startsWith(prefix + 'role')) {
+        let member = message.mentions.users.first();
+        let role = args.join(' ').replace(member, '').replace(args[0], '').replace(' ', '');
+        console.log(role);
+        if(member) {
+              if(role.startsWith('-')) {
+                let roleRe = args.join(' ').replace(member, '').replace(args[0], '').replace('-', '').replace(' ', '');
+                console.log(roleRe);
+                let role1 = message.guild.roles.find('name', roleRe);
+                console.log(`hi`);
+const ee =new Discord.RichEmbed()
+ .setDescription('**:x: I can’t find the role.**')
+ .setFooter('Requested By '+message.author.username,message.author.avatarURL)
+        if(!role1) return message.channel.send(ee);                message.guild.member(member).removeRole(role1.id);
+                
+                     const e = new Discord.RichEmbed()
+                     
+                 .setDescription(':white_check_mark:** Changed Roles For **'+member+'**,** '+'**'+'-'+role1.name+'**')
+                .setFooter('Requested By '+message.author.username,message.author.avatarURL)
+                .setColor('BLACK')
+                 message.channel.send(e)
+            } else if(!role.startsWith('-')) {
+                let roleRe = args.join(' ').replace(member, '').replace(args[0], '').replace('-', '').replace(' ', '');
+                let role1 = message.guild.roles.find('name', roleRe);
+const ee =new Discord.RichEmbed()
+ .setDescription('**:x: I can’t find the role.**')
+ .setFooter('Requested By : '+message.author.username,message.author.avatarURL)
+        if(!role1) return message.channel.send(ee);                message.guild.member(member).addRole(role1);
+                const e = new Discord.RichEmbed()
+                
+                .setDescription(':white_check_mark:** Changed Roles For **'+member+'**,** '+'**'+'+'+role1.name+'**')
+                .setFooter('Requested By : '+message.author.username,message.author.avatarURL)
+                .setColor('BLACK')
+                 message.channel.send(e)
+            } else {
+                message.reply(`يجب عليك كتابة اسم الرتبة`);
+            } 
+        }
+ else if(args[0] == 'all') {
+  if(role.startsWith('-')) { 
+       let roleRe = args.join(' ').replace(member, '').replace(args[0], '').replace('-', '').replace(' ', '');
+         let role1 = message.guild.roles.find('name', roleRe);
+                   message.channel.send(`الرجاء الانتظار حتى يتم الانتهاء من الامر`).then(msg =>{
+           message.guild.members.forEach(m => {
+            message.guild.member(m).removeRole(role1.id);
+        });
+         msg.edit(`** <a:like:472979723358699520>  Done...\n**` +role1.name+`** Has Taken From __${message.guild.members.size}__ Member**`);
+    });
+  }
+    if(role) {
+    let role1 = message.guild.roles.find('name', role);
+    if(!role1) return;
+    message.channel.send(`الرجاء الانتظار حتى يتم الانتهاء من الامر`).then(msg => {
+        message.guild.members.forEach(m => {
+            message.guild.member(m).addRole(role1);
+        });
+        msg.edit(`** <a:like:472979723358699520>  Done...\n**` +  role1.name+`** Has Given To __${message.guild.members.size}__ Members **`);
+    });
+}
+} else if(args[0] == 'humans') {
+     if(role.startsWith('-')) { 
+       let roleRe = args.join(' ').replace(member, '').replace(args[0], '').replace('-', '').replace(' ', '');
+         let role1 = message.guild.roles.find('name', roleRe);
+                   message.channel.send(`الرجاء الانتظار حتى يتم الانتهاء من الامر`).then(msg =>{
+           message.guild.members.forEach(m => {
+            message.guild.member(m).removeRole(role1.id);
+        });
+         msg.edit(`** <a:like:472979723358699520>  Done...\n**` +role1.name+`** Has Taken From __${message.guild.members.size}__ Member**`);
+    });
+  }
+
+    if(role) {
+        let role1 = message.guild.roles.find('name', role);
+
+ const ee =new Discord.RichEmbed()
+ .setDescription('I Cann’t Find This Role')
+ .setFooter('Requested By : '+message.author.username,message.author.avatarURL)
+        if(!role1) return message.channel.send(ee);
+        message.channel.send(`الرجاء الانتظار حتى يتم الانتهاء من الامر`).then(msg => {
+            message.guild.members.filter(m =>m.user.bot == false).forEach(m => {
+                message.guild.member(m).addRole(role1);
+            });
+        msg.edit(`** <a:like:472979723358699520>  Done...**`);
+        });
+    }
+} else if(args[0] == 'bots') {
+     if(role.startsWith('-')) { 
+       let roleRe = args.join(' ').replace(member, '').replace(args[0], '').replace('-', '').replace(' ', '');
+         let role1 = message.guild.roles.find('name', roleRe);
+                   message.channel.send(`الرجاء الانتظار حتى يتم الانتهاء من الامر`).then(msg =>{
+           message.guild.members.forEach(m => {
+            message.guild.member(m).removeRole(role1.id);
+        });
+         msg.edit(`** <a:like:472979723358699520>  Done...**`);
+    });
+  }
+    if(role) {
+        let role1 = message.guild.roles.find('name', role);
+       const ee =new Discord.RichEmbed()
+ .setDescription('I Cann’t Find This Role')
+ .setFooter('Requested By : '+message.author.username,message.author.avatarURL)
+        if(!role1) return message.channel.send(ee);
+        message.channel.send(`الرجاء الانتظار حتى يتم الانتهاء من الامر`).then(msg => {
+            message.guild.members.filter(m =>m.user.bot == true).forEach(m => {
+                message.guild.member(m).addRole(role1);
+            });
+        msg.edit(`** <a:like:472979723358699520>  Done...\n**` +role1.name+`** Has Given To __${message.guild.members.size}__ Member**`);
+});
+}
+}
+}
+});
 	
+
+client.on('message', message => {
+    if (message.content == "$امثال") {
+        var x = ["أذا ذل رويال فهو ...",
+"الإتحاد ...",
+"الناس سواسية كأسنان ...",
+"ما أشبه الليله",
+"البعد ...",
+"الماء أهون موجود وأعز ...",
+"الهزيمة تحل ...",
+"العقل ...",
+"البطنة تزيل ...",
+"اللبيب بالإشارة ...",
+"اخطب لابنتك ولا تخطب ...",
+"أعز من الولد ولد ...",
+"القرد في عين أمه ...",
+"الكتاب يقرأ من ...",
+"آخر الحياة ...",
+"أكرم نفسك عن كل",
+"العز في نواصي",
+];
+        var x2 = ['ذليل',
+        "قوة",
+        "المشط",
+        "بالبارحة",
+        "جفاء",
+        "مفقود",
+        "العزيمة",
+        "زينة",
+        "الفطنة",
+        "يفهم",
+        "لابنك",
+        "الولد",
+        "غزال",
+        "عنوانه",
+        "الموت",
+        "دنيء",
+        "الخيل",
+        
+        
+        
+        
+        ];
+        
+        var x3 = Math.floor(Math.random()*x.length)
+        message.channel.send(` اكمل المثل التآلي :  __**${x[x3]}**__ ؟
+    لديك 30 ثآنية للإجآبة `).then(msg1=> {
+            var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
+                maxMatches : 1,
+                time : 30000,
+                errors : ['time']
+            })
+        r.catch(() => {
+            return message.channel.send(`❎ لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح 
+            الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
+        })
+        
+        r.then((collected)=> {
+            message.channel.send(`${collected.first().author} لقد قمت بكتابة الجواب الصحيح بالوقت المناسب  `);
+        })
+        })
+    }
+})
 	
-	
-	
+
 	
 	client.login(process.env.BOT_TOKEN);
