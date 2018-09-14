@@ -403,6 +403,7 @@ __~~WeAreOne~~__ By: ! ＭＯ３ＡＺ ⊗#1599
 ❖ $msg ➾  for send msg for someone by bot
 ❖ $msg ➾  for send msg for someone by bot
 ❖ $topinv ➾ to know who invite people
+❖ $ticket ➾ to take with support team
 ╔══════════════❖]╗
                   Games
 ╚[❖════════════❖]╝
