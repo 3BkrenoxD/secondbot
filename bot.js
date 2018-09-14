@@ -672,7 +672,6 @@ client.on('message', message => {
     }
 })
 
-
 client.on('message', message=> {
     if (message.author.bot) return;
     if (message.isMentioned(client.user))
@@ -680,21 +679,7 @@ client.on('message', message=> {
     message.reply(" هلا !!");
     }
 });
-	
-client.on('message', message=> {
-    if (message.author.bot) return;
-    if (message.isMentioned(client.user))
-    {
-    message.reply(" ياليل شتبي يا ورع !!");
-    }
-});
-	client.on('message', message=> {
-    if (message.author.bot) return;
-    if (message.isMentioned(client.user))
-    {
-    message.reply(" لا تزعجني !!");
-    }
-});
+
 
 
 	client.login(process.env.BOT_TOKEN);
