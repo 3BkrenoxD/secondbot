@@ -228,7 +228,7 @@ if(command === `unmute`) {
 
 
 client.on('message', message => {
-    if (message.content == "!امثال") {
+    if (message.content == "$امثال") {
         var x = ["أذا ذل رويال فهو ...",
 "الإتحاد ...",
 "الناس سواسية كأسنان ...",
