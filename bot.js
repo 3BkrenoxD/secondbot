@@ -711,7 +711,9 @@ hours = 12;
  
 });
 
-
+client.on('ready', () => {
+    client.channels.get("468153018064306176").join();
+    });
 
 
 
