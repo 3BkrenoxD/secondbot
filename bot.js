@@ -364,7 +364,7 @@ message.reply('**شيك على الخاص !! :mailbox_with_mail: **')
 
 
  message.author.sendMessage(`
-__~~WeAreOne~~__ By: ! ＭＯ３ＡＺ ⊗#1599
+__~~WeAreOne~~__ By: @!     ＭＯ３ＡＺ ⊗#1599
 ╭╮╭╮╭╮╱╱╭━━━╮╱╱╱╱╭━━━╮
 ┃┃┃┃┃┃╱╱┃╭━╮┃╱╱╱╱┃╭━╮┃
 ┃┃┃┃┃┣━━┫┃╱┃┣━┳━━┫┃╱┃┣━╮╭━━╮
@@ -762,4 +762,10 @@ client.on('message', message => {
       message.author.sendEmbed(Embed11)
     }
 });
+
+
+
+
+
+
 	client.login(process.env.BOT_TOKEN);
