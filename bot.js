@@ -774,7 +774,7 @@ client.on('message', message => {
 if (message.content === '$shop') {
 let helpembed = new Discord.RichEmbed()
 .setColor ('RANDOM')
-.setDescription (`Help Commands
+.setDescription (`฿ỒŢ ṥSḩỒק
 ===============================================
 ฿ỒŢ ṥSḩỒק
 -----------------
