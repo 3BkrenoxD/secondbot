@@ -407,7 +407,7 @@ __~~WeAreOne~~__ By: @!     ＭＯ３ＡＺ ⊗#1599
 ❖ $ticket ➾ to take with support team
 ╔══════════════❖]╗
              لمعرفة اوامر الكلان قم بكتابة
-              ```$clan info```
+                $clan info
 ╚[❖════════════❖]╝
 ╔══════════════❖]╗
                   Games
